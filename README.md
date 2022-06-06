@@ -6,6 +6,7 @@ SingUMA Group Lyric Tool &amp; ffmpeg tool
 先将FFmpeg解压到lib目录下，运行需要Python3环境和安装相应的支持库（见Requirements.txt），或使用“一键安装需求”功能。  
 点击“点我运行.bat”，或者使用cmd运行  
 > python main.py  
+> 
 进入命令行交互式界面，执行相应的操作。  
 
 # 主要功能
