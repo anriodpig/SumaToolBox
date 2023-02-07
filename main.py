@@ -1,5 +1,11 @@
 # SumaTools - Rebuild 2021-08-09
 # 更新日志：
+# 2023-02-07 v3.1.1:
+# @LiFang           1.修复了菜单中的文本错误
+#                   2.更新了metadata信息（到第九届）
+# TODO:
+#                   1.修复lrc批量转换过程会尝试转换非LRC文件的bug
+#
 # 2021-09-27 v3.1： 1.修复了菜单3中功能2不可用的问题@LiFang
 # @LiFang           2.更新了metadata信息 改进了metadata合成方式
 #                   3.新增别名MaBox，同时推出HyBox（换源Box）
@@ -65,8 +71,8 @@ def main():
 
 def menu_main():
     os_cls()
-    os_set_title("Suma工具箱3 - 主菜单")
-    print("SumaToolBox_V3.0.0    主菜单")
+    os_set_title("Suma工具箱2023 - 主菜单")
+    print("SumaToolBox_V3.1.1    主菜单")
     print("1.歌词功能")
     print("2.字幕功能")
     print("3.压制功能")
@@ -92,8 +98,8 @@ def menu_main():
 
 
 def menu_sub_1():
-    os_set_title("Suma工具箱3 - 歌词菜单")
-    print("SumaToolBox_V3.0.0    1 - 歌词菜单")
+    os_set_title("Suma工具箱2023 - 歌词菜单")
+    print("SumaToolBox_V3.1.1    1 - 歌词菜单")
     print("1.键盘输入网易云链接  获取LRC歌词  [单次]")
     print("2.从excel中导入网易云链接  批量获取LRC歌词")
     print("3.从download.json导入网易云链接  批量获取LRC歌词  [高级]")
@@ -131,8 +137,8 @@ def menu_sub_1():
 
 
 def menu_sub_2():
-    os_set_title("Suma工具箱3 - 字幕菜单")
-    print("SumaToolBox_V3.0.0    2-字幕菜单")
+    os_set_title("Suma工具箱2023 - 字幕菜单")
+    print("SumaToolBox_V3.1.1    2-字幕菜单")
     print("1.将LRC文件转为ASS  [单次]")
     print("2.将全部LRC转换为ASS  [会覆盖已存在的ASS文件]")
     print("3.从convert.json批量导入转换任务  [高级]")
@@ -225,10 +231,10 @@ def convert_ass_to_mp4(ass_in_path, mp4_in_path, mp3_in_path, mp4_out_path):
 
 
 def menu_sub_3():
-    os_set_title("Suma工具箱3 - 压制菜单")
-    print("SumaToolBox_V3.0.0    3-压制菜单")
+    os_set_title("Suma工具箱2023 - 压制菜单")
+    print("SumaToolBox_V3.1.1    3-压制菜单")
     print("1.压制/换源单个视频  [单次]")
-    print("2.压制所有匹配的对  [会覆盖已存在的ASS文件]")
+    print("2.压制所有匹配的对  [会覆盖已存在的MP4文件]")
     print("3.不压制仅换源（快速更换bgm）")
     print("4.从convert.json批量导入转换任务  [高级]")
 
@@ -407,7 +413,7 @@ lrc_web_headers = {'Referer': 'http://music.163.com/',
                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', }
 
 ass_header = '''[Script Info]
-Title: SumaToolBox v1 output file
+Title: SumaToolBox v3 output file
 ScriptType: v4.00+
 WrapStyle: 0
 ScaledBorderAndShadow: yes
@@ -416,7 +422,7 @@ PlayResX: 1920
 PlayResY: 1080
 
 [SumaToolBox LRC2ASS converter]
-Version: 3.0.1
+Version: 3.1.1
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -838,7 +844,7 @@ def xls_read(filename):
 
 # ----
 if __name__ == '__main__':
-    os_set_title("MaBox2022 - 初始化")
+    os_set_title("MaBox2023 - 初始化")
     cwd = os.getcwd()
     print(f'当前工作路径："{cwd}"')
     fp_conf_hw_accel = open(cwd + '\\config\\hw_accel.conf')
@@ -857,7 +863,7 @@ if __name__ == '__main__':
 
     flag_debug_lrc_show_content = 0
 
-    ffmpeg_metadata = 'MaBox2022.OS_GH_0f18597,FFmpeg['+hw_accel+'],Copyright @SingUMA_Group'
+    ffmpeg_metadata = 'MaBox2023.S9_V3.1.1,FFmpeg['+hw_accel+'],Copyright @SingUMA_Group'
 
     main()
     test()
