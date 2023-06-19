@@ -24,3 +24,7 @@ SingUMA Group Lyric Tool &amp; ffmpeg tool
 # 项目依赖
 本项目的压制功能依赖于ffmpeg（ https://github.com/FFmpeg/FFmpeg ）感谢开源社区的贡献人员。  
 本项目的lrc解析取自163MusicApi，仅作学习和交流使用，请勿滥用。  
+
+# TODO:
+集成Tencent Music API
+卡拉ok歌词功能支持按字k帧
